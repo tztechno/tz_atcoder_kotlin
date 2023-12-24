@@ -1,19 +1,33 @@
 #ABC329_B
 #next
 
+
 fun main() {
     val N = readLine()!!.toInt()
     val A = readLine()!!.split(" ").map { it.toInt() }
 
-    // Create a set B from the list A
-    val B = A.toSet()
+    // Remove duplicates and sort the list in ascending order
+    val sortedUniqueList = A.distinct().sorted()
 
-    // Convert the set back to a list to allow sorting
-    val C = B.toList()
+    // Check if there are at least two elements in the list
+    println(sortedUniqueList[sortedUniqueList.size - 2])
 
-    // Sort the list C in ascending order
-    C.sort()
+    }
 
-    // Print the second largest element (index -2)
-    println(C[C.lastIndex - 1]) // Access the element using lastIndex
+
+fun main() {
+    val N = readLine()!!.toInt()
+    val A = readLine()!!.split(" ").map { it.toInt() }
+
+    // Remove duplicates and sort the list in ascending order
+    val sortedUniqueList = A.distinct().sorted()
+
+    // Check if there are at least two elements in the list
+    if (sortedUniqueList.size >= 2) {
+        // Print the second largest element
+        println(sortedUniqueList[sortedUniqueList.size - 2])
+    } else {
+        println("Not enough elements in the list.")
+    }
 }
+
