@@ -22,7 +22,10 @@
 ```
 ---
 ```
-
+val N = readLine()!!.toInt()
+val A = readLine()!!.split(" ").map { it.toInt() }.toMutableList()
+val B = A.toMutableList()
+var flag = true
 ```
 ---
 ```
